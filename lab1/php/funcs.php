@@ -9,5 +9,3 @@ function clear_table()
 {
     $_SESSION['table'] = array();
 }
-require_once 'check.php';
-

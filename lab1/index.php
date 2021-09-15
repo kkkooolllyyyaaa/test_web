@@ -1,10 +1,5 @@
 <?php
-require_once('php/funcs.php');
-if (!empty($_POST['clear']) && $_POST['clear']) {
-    clear_table();
-} else if (!empty($_POST['check']) && isset($_POST['check'])) {
-    check();
-}
+session_start();
 ?>
 <!doctype html>
 <html lang="ru">
@@ -101,36 +96,6 @@ if (!empty($_POST['clear']) && $_POST['clear']) {
         .text-input:focus {
             outline: 2px solid #734108;
             font-size: 70%;
-        }
-
-        .radio input {
-            display: none; /* Прячем исходный переключатель */
-        }
-
-        .radio span {
-            position: relative; /* Относительное позиционирование */
-            display: inline-block; /* Строчно-блочный элемент */
-            width: 20px;
-            height: 20px; /* Размеры */
-            background: #F5F5F5; /* Серый цвет фона */
-            border-radius: 50%; /* Круглый переключатель */
-            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Тень внутри */
-        }
-
-        .radio input:checked + span {
-            background: #F44336; /* Красный цвет фона */
-        }
-
-        /* Добавляем белую точку по центру */
-        .radio input:checked + span::before {
-            content: '';
-            position: absolute;
-            left: 6px;
-            top: 6px;
-            background: #fff;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
         }
 
         .action-buttons {
@@ -244,7 +209,7 @@ if (!empty($_POST['clear']) && $_POST['clear']) {
     </header>
 </div>
 <div class="main-content">
-    <form class="parameter-form" method="post" name="frm">
+    <form class="parameter-form" action="php/check.php" method="post" name="frm">
         <h3>X value:</h3>
         <label>
             <input class="text-input" maxlength="6" type="text" name="x" placeholder="(-3; 3)" size="13">
@@ -254,32 +219,28 @@ if (!empty($_POST['clear']) && $_POST['clear']) {
         <table>
             <tbody>
             <tr>
-                <td>
-                    <label class="radio">
-                        <input type="radio" name="y" value="-3">-3
-                        <span></span>
-                    </label>
-                </td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="-2">-2</label></td>
+                        <input type="radio" name="y" value="-3">-3</label></td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="-1">-1</label></td>
+                        <input type="radio" name="y" value="-2">-2</label></td>
+                <td><label>
+                        <input type="radio" name="y" value="-1">-1</label></td>
             </tr>
             <tr>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="0"> 0</label></td>
+                        <input type="radio" name="y" value="0"> 0</label></td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="1"> 1</label></td>
+                        <input type="radio" name="y" value="1"> 1</label></td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="2"> 2</label></td>
+                        <input type="radio" name="y" value="2"> 2</label></td>
             </tr>
             <tr>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="3"> 3</label></td>
+                        <input type="radio" name="y" value="3"> 3</label></td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="4"> 4</label></td>
+                        <input type="radio" name="y" value="4"> 4</label></td>
                 <td><label>
-                        <input class="radio" type="radio" name="y" value="5"> 5</label></td>
+                        <input type="radio" name="y" value="5"> 5</label></td>
             </tr>
             </tbody>
         </table>

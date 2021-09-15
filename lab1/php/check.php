@@ -1,4 +1,5 @@
 <?php
+session_start();
 function validate($x, $y, $r)
 {
     return is_numeric($x) &&
@@ -17,8 +18,7 @@ function is_hit($x, $y, $r)
     else return false;
 }
 
-function check()
-{
+if (isset($_POST['check'])) {
     date_default_timezone_set('Europe/Moscow');
     $exc_time = microtime(true);
     $cur_time = date("H:i:s");
@@ -47,5 +47,9 @@ function check()
     } else {
         http_response_code(400);
     }
-
+} else if (isset($_POST['clear'])) {
+    require_once('funcs.php');
+    clear_table();
 }
+
+header('Location: ../index.php');
