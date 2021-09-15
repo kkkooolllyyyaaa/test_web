@@ -23,12 +23,14 @@ if (isset($_POST['check'])) {
     $exc_time = microtime(true);
     $cur_time = date("H:i:s");
     $x = (($_POST["x"]) != null && isset($_POST["x"])) ? str_replace(",", ".", $_POST["x"]) : null;
-    if ($x === 0.0)
-        $x = 0;
+    if (abs($x - round($x)) <= 1e-7)
+        $x = round($x);
     $y = (($_POST["y"] != null) && isset($_POST["y"])) ? $_POST["y"] : null;
-    if ($y === 0.0)
-        $y = 0;
+    if (abs($y - round($y)) <= 1e-7)
+        $y = round($y);
     $r = (!empty($_POST["r"]) && isset($_POST["r"])) ? str_replace(",", ".", $_POST["r"]) : null;
+    if (abs($r - round($r)) <= 1e-7)
+        $r = round($r);
     if (validate($x, $y, $r)) {
         $res_style = "style=\"color:";
         if (strval(is_hit($x, $y, $r))) {

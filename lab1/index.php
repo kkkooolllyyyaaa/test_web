@@ -209,10 +209,10 @@ session_start();
     </header>
 </div>
 <div class="main-content">
-    <form class="parameter-form" action="php/check.php" method="post" name="frm">
+    <form class="parameter-form" action="php/check.php" method="post" name="form">
         <h3>X value:</h3>
         <label>
-            <input class="text-input" maxlength="6" type="text" name="x" placeholder="(-3; 3)" size="13">
+            <input id='textX' class="text-input" maxlength="6" type="text" name="x" placeholder="(-3; 3)" size="13">
         </label>
 
         <h3>Y value:</h3>
@@ -220,34 +220,34 @@ session_start();
             <tbody>
             <tr>
                 <td><label>
-                        <input type="radio" name="y" value="-3">-3</label></td>
+                        <input id="radio1" class="radioY" type="radio" name="y" value="-3">-3</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="-2">-2</label></td>
+                        <input id="radio2" class="radioY" type="radio" name="y" value="-2">-2</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="-1">-1</label></td>
+                        <input id="radio3" class="radioY" type="radio" name="y" value="-1">-1</label></td>
             </tr>
             <tr>
                 <td><label>
-                        <input type="radio" name="y" value="0"> 0</label></td>
+                        <input id="radio4" class="radioY" type="radio" name="y" value="0"> 0</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="1"> 1</label></td>
+                        <input id="radio5" class="radioY" type="radio" name="y" value="1"> 1</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="2"> 2</label></td>
+                        <input id="radio6" class="radioY" type="radio" name="y" value="2"> 2</label></td>
             </tr>
             <tr>
                 <td><label>
-                        <input type="radio" name="y" value="3"> 3</label></td>
+                        <input id="radio7" class="radioY" type="radio" name="y" value="3"> 3</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="4"> 4</label></td>
+                        <input id="radio8" class="radioY" type="radio" name="y" value="4"> 4</label></td>
                 <td><label>
-                        <input type="radio" name="y" value="5"> 5</label></td>
+                        <input id="radio9" class="radioY" type="radio" name="y" value="5"> 5</label></td>
             </tr>
             </tbody>
         </table>
 
         <h3>Radius:</h3>
         <label>
-            <input class="text-input" maxlength="6" type="text" name="r" placeholder="(2; 5)" size="13">
+            <input id="textR" class="text-input" maxlength="6" type="text" name="r" placeholder="(2; 5)" size="13">
         </label>
 
         <div class="action-buttons">
@@ -340,4 +340,7 @@ session_start();
     </table>
 </div>
 </body>
+<script src="js/validator.js">
+
+</script>
 </html>
