@@ -1,5 +1,5 @@
 # lab1
-## stack:
+## stack: ##
 1) php
 2) js
 3) html
