@@ -21,4 +21,4 @@ stack:
 * Отступы элементов ввода должны задаваться в пикселях.
 * Страница должна содержать сценарий на языке JavaScript, осуществляющий валидацию значений, вводимых пользователем в поля формы. Любые некорректные значения (например, буквы в координатах точки или отрицательный радиус) должны блокироваться.
 
-![Фото](https://se.ifmo.ru/courses/web?p_p_id=iapsportletlab6_WAR_iapsportlet&p_p_lifecycle=2&p_p_state=normal&p_p_mode=view&p_p_cacheability=cacheLevelPage?1631742485672)
+![Фото](https://github.com/kkkooolllyyyaaa/test_web/blob/master/lab1/img/areas.png)
