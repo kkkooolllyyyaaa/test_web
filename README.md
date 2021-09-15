@@ -1,5 +1,6 @@
-# web lab1
-# stack:#
+# lab1
+
+stack
 
 ### php
 
