@@ -1,11 +1,14 @@
 <?php
 session_start();
+if (sizeof($_SESSION['table']) == 0)
+    $_SESSION['table'] = array();
 ?>
 <!doctype html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>lab 1</title>
+    <link rel="icon" type="image/png" href="img/pricel.png"/>
     <style>
         body {
             margin: 0;
@@ -202,7 +205,7 @@ session_start();
             <a class="link" href="html/se.html">
                 Variant 10212
             </a>
-            <a class="link" href="https://github.com/kkkooolllyyyaaa" target="_blank">
+            <a class="link" href="https://github.com/kkkooolllyyyaaa/test_web" target="_blank">
                 <img alt="github" src="img/github.svg" width="35">
             </a>
         </div>
