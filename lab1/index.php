@@ -219,7 +219,7 @@ if (sizeof($_SESSION['table']) == 0)
         </label>
 
         <h3>Y value:</h3>
-        <table>
+        <table class="y-table">
             <tbody>
             <tr>
                 <td><label>
