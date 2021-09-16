@@ -1,7 +1,4 @@
 const sendButton = document.getElementById("submit_request")
-const x = (document.getElementById('textX'));
-const y = (document.getElementsByClassName('radioY'));
-const r = (document.getElementById('textR'));
 
 function validate() {
     const xVal = document.forms['form']['x'].value.replace(/,/, '.');
@@ -24,6 +21,7 @@ function validate() {
         }
     }
 }
+
 function isEmpty(obj) {
     for (let key in obj) {
         return false;
