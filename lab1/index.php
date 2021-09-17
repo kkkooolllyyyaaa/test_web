@@ -211,7 +211,7 @@ if (sizeof($_SESSION['table']) == 0)
         </div>
     </header>
 </div>
-<div class="main-content">
+<div class="main-content" id='header'>
     <form class="parameter-form" action="php/check.php" method="post" name="form">
         <h3>X value:</h3>
         <label>

@@ -33,10 +33,12 @@ function validate() {
         }
     }
 }
+
 function isEmpty(obj) {
     for (let key in obj) {
         return false;
     }
     return true;
 }
-sendButton.onclick = validate
+
+sendButton.onclick = validate;
