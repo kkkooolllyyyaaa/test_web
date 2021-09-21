@@ -11,7 +11,7 @@ function validate($x, $y, $r)
 
 function is_hit($x, $y, $r)
 {
-    if (($x >= 0 && $y >= 0 && ($x * $x + $y * $y) <= ($r * $r)) ||
+    if (($x >= 0 && $y >= 0 && ($x * $x + $y * $y) <= ($r / 2 * $r / 2)) ||
         ($x <= 0 && $y <= 0 && abs($y) <= $r && abs($x) <= ($r / 2)) ||
         ($x <= 0 && $y >= 0 && $y <= ($x + $r / 2)))
         return true;
