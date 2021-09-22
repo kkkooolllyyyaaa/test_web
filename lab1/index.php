@@ -183,12 +183,12 @@ if (sizeof($_SESSION['table']) == 0)
         }
 
         /*COMMON*/
-        a[href] {
+        #header .nav a[href] {
             font-weight: bold;
             font-size: 105%;
         }
 
-        a:hover {
+        #header .nav a:hover {
             background-color: #fcc57d;
         }
     </style>
