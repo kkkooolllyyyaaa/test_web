@@ -1,4 +1,4 @@
-# [lab](https://se.ifmo.ru/~s311690/lab1/index.php)
+# [Протестировать](https://se.ifmo.ru/~s311690/lab1/index.php)
 stack:
 1) php
 2) js
